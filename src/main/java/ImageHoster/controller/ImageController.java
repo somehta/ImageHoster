@@ -148,7 +148,7 @@ public class ImageController {
         updatedImage.setDate(new Date());
 
         imageService.updateImage(updatedImage);
-        return "redirect:/images/" + updatedImage.getTitle();
+        return "redirect:/images/" +updatedImage.getId()+"/"+ updatedImage.getTitle();
     }
 
 
