@@ -19,7 +19,8 @@ public class UserService {
         userRepository.registerUser(newUser);
     }
 
-
+    //Password must contain atleast 1 alphabet, 1 number & 1 special character
+    //Call validatePassword() to validate password
     public boolean validatePassword(User newUser){
         String password = newUser.getPassword();
         String regex = "(?=.*[0-9]).*" + "(?=.*[a-zA-Z]).*" + "(?=.*[@#$%^&+=]).*";
